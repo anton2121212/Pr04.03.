@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace Pr04._03
 {
-    internal class SinProduct
+    class SinProduct :Product
     {
+        public override void Info()
+        {
+            Console.WriteLine($"Product: {Name}, Price: {Price}, Production Date: {ProductionDate}, Expiry Date: {ExpiryDate}");
+        }
     }
 }

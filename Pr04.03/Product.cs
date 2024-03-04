@@ -6,7 +6,18 @@ using System.Threading.Tasks;
 
 namespace Pr04._03
 {
-    internal class Product
+    abstract class Product
     {
+        public string Name { get; set; }
+        public decimal Price { get; set; }
+        public DateTime ProductionDate { get; set; }
+        public DateTime ExpiryDate { get; set; }
+
+        public abstract void Info();
+
+        public bool IsExpired()
+        {
+            return DateTime.Now > ExpiryDate;
+        }
     }
 }
